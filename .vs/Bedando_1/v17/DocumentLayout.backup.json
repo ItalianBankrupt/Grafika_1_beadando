@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA111B4A-1BF3-4CF9-9B1A-BBBF22E90080}|Bedando_1\\Bedando_1.vcxproj|D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA111B4A-1BF3-4CF9-9B1A-BBBF22E90080}|Bedando_1\\Bedando_1.vcxproj|solutionrelative:Bedando_1\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA111B4A-1BF3-4CF9-9B1A-BBBF22E90080}|Bedando_1\\Bedando_1.vcxproj|D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\vertexShader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA111B4A-1BF3-4CF9-9B1A-BBBF22E90080}|Bedando_1\\Bedando_1.vcxproj|solutionrelative:Bedando_1\\vertexShader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA111B4A-1BF3-4CF9-9B1A-BBBF22E90080}|Bedando_1\\Bedando_1.vcxproj|D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\fragmentShader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA111B4A-1BF3-4CF9-9B1A-BBBF22E90080}|Bedando_1\\Bedando_1.vcxproj|solutionrelative:Bedando_1\\fragmentShader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\Source.cpp",
+              "RelativeDocumentMoniker": "Bedando_1\\Source.cpp",
+              "ToolTip": "D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\Source.cpp",
+              "RelativeToolTip": "Bedando_1\\Source.cpp",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T12:28:45.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fragmentShader.glsl",
+              "DocumentMoniker": "D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\fragmentShader.glsl",
+              "RelativeDocumentMoniker": "Bedando_1\\fragmentShader.glsl",
+              "ToolTip": "D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\fragmentShader.glsl",
+              "RelativeToolTip": "Bedando_1\\fragmentShader.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-07T12:46:55.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "vertexShader.glsl",
+              "DocumentMoniker": "D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\vertexShader.glsl",
+              "RelativeDocumentMoniker": "Bedando_1\\vertexShader.glsl",
+              "ToolTip": "D:\\Egyetem\\Felevek\\6.felev\\Szamitogepes_grafika\\Beadandok\\Bedando_1\\Grafika_1_beadando\\Bedando_1\\vertexShader.glsl",
+              "RelativeToolTip": "Bedando_1\\vertexShader.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-07T12:30:53.7Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
