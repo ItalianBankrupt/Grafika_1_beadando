@@ -19,9 +19,13 @@ GLfloat szakaszKoordinatak[4];
 GLboolean	keyboard[512] = { GL_FALSE };
 float sugar = 50.0f;
 float inc = 1.0f;
-float offset = 0.0f;
+float offsetX = 0.0f;
+float offsetY = 0.0f;
+float incX = 1.0f;
+float incY = 0.56f;
 float szakaszEltolas = 0.0f;
 bool metszes = true;
+bool elteritettIrany = false;
 
 bool vanEMetszes(GLfloat korKoordinatak[], GLfloat szakaszKoordinatak[]) {
 	float centerX = korKoordinatak[0];
@@ -87,13 +91,38 @@ void korRajzolas() {
 	int kepernyoSzelessege, kepernyoMagassaga;
 	glfwGetWindowSize(window, &kepernyoSzelessege, &kepernyoMagassaga);
 
-	float centerX = kepernyoSzelessege / 2.0f + offset;
-	float centerY = kepernyoMagassaga / 2.0f;
+	float centerX = kepernyoSzelessege / 2.0f + offsetX;
+	float centerY = kepernyoMagassaga / 2.0f + offsetY;
 	
-	if (centerX + sugar >= 600 || centerX - sugar <= 0) {
-		inc = -inc;  
+	float nemTeritettCenterX = 10.0f;
+	float nemTeritettCenterY = 0.0f;
+
+	float teritettCenterX = 10.0f * cos(25.0f * 3.14159f / 180.0f);
+	float teritettCenterY = 10.0f * sin(25.0f * 3.14159f / 180.0f);
+
+
+	if (elteritettIrany) {
+		centerX += teritettCenterX;
+		centerY += teritettCenterY;
 	}
-	offset += inc;
+	else {
+		centerX += nemTeritettCenterX;
+		centerY += nemTeritettCenterY;
+	}
+	
+	if (centerX + sugar >= kepernyoSzelessege || centerX - sugar <= 0) {
+		incX = -incX;  
+	}
+
+	if (centerY + sugar >= kepernyoMagassaga || centerY - sugar <= 0) {
+		incY = -incY;
+	}
+
+	offsetX += incX;
+	if (elteritettIrany == true) {
+		offsetY += incY;
+	}
+	
 
 	korKoordinatak[0] = (2.0f * centerX) / kepernyoSzelessege - 1.0f;
 	korKoordinatak[1] = (2.0f * centerY) / kepernyoMagassaga - 1.0f;
@@ -117,7 +146,8 @@ void korRajzolas() {
 	glUniform1f(glGetUniformLocation(renderingProgram, "radius"), 50.0f);
 	glUniform1i(glGetUniformLocation(renderingProgram, "isLine"), 0);
 	glUniform1i(glGetUniformLocation(renderingProgram, "moving"), 1);
-	glUniform1i(glGetUniformLocation(renderingProgram, "offset"), offset);
+	glUniform1i(glGetUniformLocation(renderingProgram, "offsetX"), offsetX);
+	glUniform1i(glGetUniformLocation(renderingProgram, "offsetY"), offsetY);
 	glUniform1i(glGetUniformLocation(renderingProgram, "intersection"), metszes);
 	glDrawArrays(GL_TRIANGLE_FAN, 0, 362);  
 
@@ -273,6 +303,9 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 	if ((action == GLFW_PRESS) && (key == GLFW_KEY_DOWN)) {
 		szakaszEltolas -= 0.01f;
 	}
+	if ((action == GLFW_PRESS) && (key == GLFW_KEY_S)) {
+		elteritettIrany = !elteritettIrany;
+	}
 }
 
 void cursorPosCallback(GLFWwindow* window, double xPos, double yPos)
@@ -318,7 +351,6 @@ void display(GLFWwindow* window, double currentTime) {
 	korRajzolas();
 	szakaszRajzolas();
 	metszes = vanEMetszes(korKoordinatak, szakaszKoordinatak);
-	
 	/** Ha kirajzoltuk a pontunkat, kísérletezzünk a pont méretének növelésével. */
 	//glPointSize(30.0);
 	/** Ha vonalat rajzolunk ki, ezzel módosíthatjuk a láthatóságot. */
